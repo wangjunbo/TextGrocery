@@ -1,9 +1,11 @@
 from collections import defaultdict
-import cPickle
+import pickle as cPickle
 import os
 
 import jieba
-from base import *
+from .base import *
+from .converter import GroceryTextConverter
+from .learner import *
 
 __all__ = ['GroceryTextConverter']
 
@@ -11,9 +13,9 @@ __all__ = ['GroceryTextConverter']
 def _dict2list(d):
     if len(d) == 0:
         return []
-    m = max(v for k, v in d.iteritems())
+    m = max(v for k, v in d.items())
     ret = [''] * (m + 1)
-    for k, v in d.iteritems():
+    for k, v in d.items():
         ret[v] = k
     return ret
 

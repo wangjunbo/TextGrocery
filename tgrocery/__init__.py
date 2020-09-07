@@ -1,5 +1,5 @@
-from converter import *
-from classifier import *
+from .classifier import *
+from .converter import *
 
 __all__ = ['Grocery']
 

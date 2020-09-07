@@ -51,14 +51,14 @@ class GroceryTestResult(object):
         return table_string
 
     def show_result(self):
-        print self.draw_table(
+        print(self.draw_table(
             zip(
                 ['%.2f%%' % (s * 100) for s in self.accuracy_labels.values()],
                 ['%.2f%%' % (s * 100) for s in self.recall_labels.values()]
             ),
             self.accuracy_labels.keys(),
             ('accuracy', 'recall')
-        )
+        ))
 
     def __str__(self):
         return str(self.accuracy_overall)
