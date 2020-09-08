@@ -32,7 +32,7 @@ class GroceryTestResult(object):
             labels[true_label][2] += 1
         self.accuracy_labels = {}
         self.recall_labels = {}
-        for key, val in labels.iteritems():
+        for key, val in labels.items():
             try:
                 self.accuracy_labels[key] = float(val[0]) / val[1]
             except ZeroDivisionError:

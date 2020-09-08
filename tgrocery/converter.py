@@ -4,7 +4,7 @@ import os
 
 import jieba
 from .base import *
-from .converter import GroceryTextConverter
+from .converter import *
 from .learner import *
 
 __all__ = ['GroceryTextConverter']
